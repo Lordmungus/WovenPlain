@@ -18,3 +18,33 @@ Villager::Villager(string _name, unsigned int _age, professions _profession):
 Villager::~Villager()
 {
 }
+
+void Villager::setName(string _name)
+{
+	name = _name;
+}
+
+string Villager::getName()
+{
+	return string();
+}
+
+void Villager::incrementAge()
+{
+	age++;
+}
+
+unsigned int Villager::getAge()
+{
+	return age;
+}
+
+void Villager::setProfession(professions _profession)
+{
+	profession = _profession;
+}
+
+Professions::professions Villager::getProfession()
+{
+	return profession;
+}

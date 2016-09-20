@@ -1,5 +1,5 @@
 #include "Professions.h"
-
+#include <string>
 
 
 Professions::Professions()

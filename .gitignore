@@ -35,3 +35,7 @@ WovenPlain.VC.VC.opendb
 >>>>>>> parent of 0539ce5... .gitignore change
 *.db
 *.opendb
+WovenPlain.VC.db
+*.opendb
+WovenPlain.VC.db
+*.suo

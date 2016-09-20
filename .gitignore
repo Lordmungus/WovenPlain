@@ -27,6 +27,9 @@
 *.exe
 *.out
 *.app
+<<<<<<< HEAD
 *.opendb
 *.db
 WovenPlain.VC.VC.opendb
+=======
+>>>>>>> parent of 0539ce5... .gitignore change

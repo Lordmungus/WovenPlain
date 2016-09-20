@@ -26,7 +26,7 @@ void Villager::setName(string _name)
 
 string Villager::getName()
 {
-	return string();
+	return name;
 }
 
 void Villager::incrementAge()

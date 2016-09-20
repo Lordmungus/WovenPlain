@@ -1,6 +1,8 @@
 #pragma once
 #include "Professions.h"
 #include <string>
+using namespace std;
+
 class Villager : public Professions
 {
 public:
@@ -14,7 +16,7 @@ public:
 	void setProfession(professions);
 	professions getProfession();
 private:
-	std::string name;
+	string name;
 	unsigned int age;
 	professions profession;
 };

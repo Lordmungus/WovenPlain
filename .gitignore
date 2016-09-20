@@ -39,3 +39,5 @@ WovenPlain.VC.db
 *.opendb
 WovenPlain.VC.db
 *.suo
+*.suo
+*.tlog

@@ -10,11 +10,11 @@ public:
 	Villager(std::string, unsigned int, professions);
 	virtual ~Villager();
 	void setName(string);
-	string getName();
+	string getName() const;
 	void incrementAge();
-	unsigned int getAge();
+	unsigned int getAge() const;
 	void setProfession(professions);
-	professions getProfession();
+	professions getProfession() const;
 private:
 	string name;
 	unsigned int age;

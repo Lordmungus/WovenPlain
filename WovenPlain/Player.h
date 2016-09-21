@@ -10,12 +10,12 @@ public:
 	virtual ~Player();
 	void incrementMoney();
 	void decrementMoney();
-	unsigned int getMoney();
+	unsigned int getMoney() const;
 	void incrementHealth();
 	void decrementHealth();
-	unsigned int getHealth();
+	unsigned int getHealth() const;
 	void setPlayerState(alive);
-	alive getPlayerState();
+	alive getPlayerState() const;
 private:
 	std::string name;
 	unsigned age;

@@ -28,7 +28,7 @@ void Player::decrementMoney()
 	money--;
 }
 
-unsigned int Player::getMoney()
+unsigned int Player::getMoney() const
 {
 	return money;
 }
@@ -52,7 +52,7 @@ void Player::decrementHealth()
 		setPlayerState(__dead);
 }
 
-unsigned int Player::getHealth()
+unsigned int Player::getHealth() const
 {
 	return 0;
 }
@@ -62,7 +62,7 @@ void Player::setPlayerState(alive __alive)
 	_alive = __alive;
 }
 
-Player::alive Player::getPlayerState()
+Player::alive Player::getPlayerState() const
 {
 	return _alive;
 }

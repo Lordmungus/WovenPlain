@@ -24,7 +24,7 @@ void Villager::setName(string _name)
 	name = _name;
 }
 
-string Villager::getName()
+string Villager::getName() const
 {
 	return name;
 }
@@ -34,7 +34,7 @@ void Villager::incrementAge()
 	age++;
 }
 
-unsigned int Villager::getAge()
+unsigned int Villager::getAge() const
 {
 	return age;
 }
@@ -44,7 +44,7 @@ void Villager::setProfession(professions _profession)
 	profession = _profession;
 }
 
-Professions::professions Villager::getProfession()
+Professions::professions Villager::getProfession() const
 {
 	return profession;
 }

@@ -25,12 +25,17 @@ void City::decrementPopulation()
 	population--;
 }
 
-void City::setName(string _name)
+unsigned int City::getPopulation() const
+{
+	return population;
+}
+
+void City::setName(const string _name)
 {
 	name = _name;
 }
 
-string City::getName()
+string City::getName() const
 {
 	return name;
 }

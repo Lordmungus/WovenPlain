@@ -11,8 +11,9 @@ public:
 	virtual ~City();
 	void incrementPopulation();
 	void decrementPopulation();
+	unsigned int getPopulation() const;
 	void setName(string);
-	string getName();
+	string getName() const;
 	void updateSize();
 private:
 	size _size;

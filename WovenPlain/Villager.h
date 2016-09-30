@@ -19,5 +19,6 @@ private:
 	string name;
 	unsigned int age;
 	professions profession;
+    // test
 };
 

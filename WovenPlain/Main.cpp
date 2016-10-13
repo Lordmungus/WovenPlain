@@ -1,19 +1,33 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include "Villager.h"
-#include "City.h"
-#include "Player.h"
+#include "Game.h"
+
 using namespace std;
 
 int main()
 {
-	Player* player = new Player();
-	string res;
-	cout << "Enter a valid name: " << endl;
-	getline(cin, res);
-	player->setName(res);
-	cout << player->getName() << endl;
-	getchar();
+	Game * game = new Game();
+	Player * player = new Player();
+
+	cout << "Enter your character's name: " << endl;
+	player->setName(std::cin);
+
+	/*
+	int age;
+	cout << endl << "What is your age? ";
+	cin >> age;
+	if (age < 20 || _age > 120)
+	{
+		cout << endl << "Age undefined.";
+		setAge();
+	}
+
+	age = _age;
+	*/
+
+	City * city = new City();
+	game->setPlayer(player);
+	game->setCity(city);
 	return 0;
 }

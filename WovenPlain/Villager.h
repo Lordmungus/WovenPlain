@@ -1,4 +1,5 @@
-#pragma once
+#ifndef VILLAGER_H
+#define VILLAGER_H
 #include "Professions.h"
 #include <string>
 using namespace std;
@@ -9,16 +10,21 @@ public:
 	Villager();
 	Villager(std::string, unsigned int, professions);
 	virtual ~Villager();
-	void setName(string);
-	string getName() const;
-	void incrementAge();
-	unsigned int getAge() const;
-	void setProfession(professions);
-	professions getProfession() const;
+
+	virtual void setName(string);
+	virtual istream& setName(istream&);
+	virtual void incrementAge();
+	virtual void setAge(unsigned int _age);
+	virtual void setProfession(professions);
+
+	virtual string getName() const;
+	virtual unsigned int getAge() const;
+	virtual professions getProfession() const;
+	
 private:
 	string name;
 	unsigned int age;
 	professions profession;
     // test
 };
-
+#endif

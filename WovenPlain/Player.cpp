@@ -3,14 +3,18 @@
 #include <iostream>
 using namespace std;
 
-
-Player::Player() :
-	name("Unnamed"), age(20), profession(unemployed), money(0), health(100), _alive(__alive)
+Player::Player():
+	money(PLAYER_HEALTH_MIN), health(PLAYER_HEALTH_MAX), _alive(__alive)
 {
 }
 
-Player::Player(string _name, unsigned int _age, Professions::professions _profession, unsigned int _money, unsigned int _health, Player::alive __alive):
-	name("Unnamed"), age(20), profession(unemployed), money(0), health(100), _alive(__alive)
+Player::Player(unsigned int _money, unsigned int _health, Player::alive __alive):
+	money(PLAYER_HEALTH_MIN), health(PLAYER_HEALTH_MAX), _alive(__alive)
+{
+}
+
+Player::Player(const Player * player) :
+	money(player->getMoney()), health(player->getHealth()), _alive(player->getPlayerState())
 {
 }
 
@@ -35,10 +39,10 @@ unsigned int Player::getMoney() const
 
 void Player::incrementHealth()
 {
-	if (health == 0)
+	if (health == PLAYER_HEALTH_MIN)
 		setPlayerState(__alive);
 
-	if (health < 100)
+	if (health < PLAYER_HEALTH_MAX)
 		health++;
 	else
 		cout << "Player is at maximum health." << endl;
@@ -46,7 +50,7 @@ void Player::incrementHealth()
 
 void Player::decrementHealth()
 {
-	if (health > 0)
+	if (health > PLAYER_HEALTH_MIN)
 		health--;
 	else
 		setPlayerState(__dead);
@@ -66,3 +70,4 @@ Player::alive Player::getPlayerState() const
 {
 	return _alive;
 }
+

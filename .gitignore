@@ -41,3 +41,11 @@ WovenPlain.VC.db
 *.suo
 *.suo
 *.tlog
+*.suo
+Debug/WovenPlain.ilk
+*.pdb
+*.idb
+WovenPlain/Debug/vc140.pdb
+*.tlog
+*.vcxproj
+WovenPlain/WovenPlain.vcxproj

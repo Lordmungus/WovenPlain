@@ -1,7 +1,6 @@
 #include "Professions.h"
 #include <string>
 
-
 Professions::Professions()
 {
 }
@@ -11,7 +10,7 @@ Professions::~Professions()
 {
 }
 
-char* Professions::getNameProfession(professions _profession)
+std::string Professions::getNameProfession(professions _profession)
 {
 	switch (_profession)
 	{

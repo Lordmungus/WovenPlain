@@ -118,15 +118,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AgeException.cpp" />
     <ClCompile Include="City.cpp" />
+    <ClCompile Include="Exception.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="NameException.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PopulationException.cpp" />
     <ClCompile Include="Professions.cpp" />
     <ClCompile Include="Villager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AgeException.h" />
     <ClInclude Include="City.h" />
+    <ClInclude Include="Exception.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="NameException.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="PopulationException.h" />
     <ClInclude Include="Professions.h" />
     <ClInclude Include="Villager.h" />
   </ItemGroup>

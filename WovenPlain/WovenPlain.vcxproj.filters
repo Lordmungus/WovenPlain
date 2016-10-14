@@ -13,13 +13,34 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Exceptions">
+      <UniqueIdentifier>{7c59211a-b8b8-4ad6-90de-570673bd2c38}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Entities">
-      <UniqueIdentifier>{429e1ec3-6b80-4d76-a4f4-dd2898340a2f}</UniqueIdentifier>
+      <UniqueIdentifier>{7cbc36ef-792e-4cea-998e-6b3622c5ecdf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception.cpp">
+      <Filter>Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="NameException.cpp">
+      <Filter>Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="PopulationException.cpp">
+      <Filter>Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="City.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Entities</Filter>
     </ClCompile>
     <ClCompile Include="Professions.cpp">
       <Filter>Entities</Filter>
@@ -27,11 +48,8 @@
     <ClCompile Include="Villager.cpp">
       <Filter>Entities</Filter>
     </ClCompile>
-    <ClCompile Include="City.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Entities</Filter>
+    <ClCompile Include="AgeException.cpp">
+      <Filter>Exceptions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +63,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="City.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NameException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PopulationException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AgeException.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

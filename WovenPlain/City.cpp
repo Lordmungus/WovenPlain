@@ -1,6 +1,8 @@
-#include "City.h"
 #include <string>
 #include <iostream>
+
+#include "City.h"
+#include "PopulationException.h"
 
 City::City()
 {
@@ -8,6 +10,11 @@ City::City()
 
 City::City(size __size, string _name, unsigned int _population) :
 	_size(__size), name(_name), population(_population)
+{
+}
+
+City::City(const City * city):
+	_size(city->getSize()), name(city->getName()), population(city->getPopulation())
 {
 }
 
@@ -30,9 +37,16 @@ unsigned int City::getPopulation() const
 	return population;
 }
 
-void City::setName(const string _name)
+void City::setName(string _name)
 {
 	name = _name;
+}
+
+void City::setName(istream& in)
+{
+	string input;
+	getline(in, input);
+	setName(input);
 }
 
 string City::getName() const
@@ -40,26 +54,32 @@ string City::getName() const
 	return name;
 }
 
+City::size City::getSize() const
+{
+	return _size;
+}
+
 void City::updateSize()
 {
-	if( population >= 0 && population < 100 )
+	if( population >= LOWER_BOUND && population < HAMLET_BOUND )
 	{
 		_size = hamlet;
 	}
-	else if(population >= 100 && population < 500)
+	else if(population >= HAMLET_BOUND && population < VILLAGE_BOUND)
 	{
 		_size = village;
 	}
-	else if(population >= 500 && population < 1000)
+	else if(population >= VILLAGE_BOUND && population < TOWN_BOUND)
 	{
 		_size = town;
 	}
-	else if(population >= 1000)
+	else if(population >= TOWN_BOUND)
 	{
 		_size = city;
 	}
 	else
 	{
-		std::cout << "Error: " << getName() << "'s population is incorrect. Size of city cannot be determined!" << std::endl;
+		throw PopulationException("Error: " + getName() + "'s population is incorrect. Size of city cannot be determined!");
 	}
+	
 }

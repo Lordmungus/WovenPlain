@@ -1,10 +1,12 @@
 #include "Villager.h"
 #include <iostream>
 #include <string>
+#include "NameException.h"
+#include "AgeException.h"
 using namespace std;
 
 Villager::Villager():
-name("unnamed"), age(20), profession(unemployed)
+name("unnamed"), age(DEFAULT_AGE), profession(unemployed)
 {
 }
 
@@ -17,15 +19,23 @@ Villager::~Villager()
 {
 }
 
-void Villager::setName(string _name)
+void Villager::checkName(string _name)
 {
+	int i = 0;
+	while (_name[i])
+	{
+		if (!isalpha(_name[i])) throw NameException("Invalid characters. Please choose [A-Z][a-z].");
+		i++;
+	}
 	name = _name;
 }
 
-istream& Villager::setName(istream& cin)
+istream& Villager::setName(istream& in)
 {
-	getline(cin, name);
-	return cin;
+	string temp;
+	in >> temp;
+	checkName(temp);
+	return in;
 }
 
 string Villager::getName() const
@@ -53,7 +63,16 @@ Professions::professions Villager::getProfession() const
 	return profession;
 }
 
-void Villager::setAge(unsigned int _age)
+void Villager::checkAge(unsigned int _age)
 {
+	if (_age < MIN_AGE || _age > MAX_AGE) throw AgeException("Age is out of bounds. Pick an age between " + AgeException::AgeErrorMessage());
 	age = _age;
+}
+
+istream& Villager::setAge(istream & in)
+{
+	unsigned int temp;
+	in >> temp;
+	checkAge(temp);
+	return in;
 }
